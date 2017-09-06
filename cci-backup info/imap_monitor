@@ -1,0 +1,26 @@
+Each existing unread and subsequent new emails after the script is started are 
+passed as Mail objects to "process_email" function.Function header is provided
+but processing implementation is left to the user. Error logs are currently sent
+to a rotating log file (in the same directory as the script) and to STDOUT. 
+Instead of polling or checking the server for new emails every now and then,
+IMAP IDLE check is utilized.  Ensure that the IMAP server supports IDLE command
+and allows at least 5 minutes of idling*** and uses the default ports for this 
+script to work. Tested to work with Gmail and default installations of MS 
+Exchange Server.
+
+Dependencies:  
+  Python 2.5+
+	eventlet
+
+Files:
+	1. imap_monitor.py - the script itself
+	2. imap_monitor.ini - a sample INI file with the minimum required sections
+		and settings; must be named as such ("imap_monitor.ini") and be located
+		in the same directory as the script
+
+To Do:
+	1. ***Remove hard-coded IDLE timeout; place in config file
+	2. Support non-standard port numbers through config file 
+	3. Accept command line settings - control verbosity of logging
+	4. Support SMTP log handling for CRITICAL errors
+	5. Improve/expand error handling blocks

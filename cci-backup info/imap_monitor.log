@@ -1,0 +1,18 @@
+2017-08-23 17:22:08,970 | imap_monitor | INFO | ... script started
+2017-08-23 17:22:08,970 | imap_monitor | INFO | setting path for email downloads - C:\Users\luunguyen\Desktop\cci-backup info\imap_monitor.py
+2017-08-23 17:22:08,970 | imap_monitor | INFO | connecting to IMAP server - mail.server.domain
+2017-08-23 17:22:30,657 | imap_monitor | ERROR | failed to connect to IMAP server - error: [Errno 10060] WSAETIMEDOUT; 
+2017-08-23 17:22:40,657 | imap_monitor | INFO | connecting to IMAP server - mail.server.domain
+2017-08-23 17:23:01,658 | imap_monitor | ERROR | failed to connect to IMAP server - error: [Errno 10060] WSAETIMEDOUT; 
+2017-08-23 17:23:11,658 | imap_monitor | INFO | connecting to IMAP server - mail.server.domain
+2017-08-23 17:23:32,658 | imap_monitor | ERROR | failed to connect to IMAP server - error: [Errno 10060] WSAETIMEDOUT; 
+2017-08-23 17:23:42,658 | imap_monitor | INFO | connecting to IMAP server - mail.server.domain
+2017-08-23 17:24:03,660 | imap_monitor | ERROR | failed to connect to IMAP server - error: [Errno 10060] WSAETIMEDOUT; 
+2017-08-23 17:24:13,660 | imap_monitor | INFO | connecting to IMAP server - mail.server.domain
+2017-08-23 17:24:34,660 | imap_monitor | ERROR | failed to connect to IMAP server - error: [Errno 10060] WSAETIMEDOUT; 
+2017-08-23 17:24:44,660 | imap_monitor | INFO | connecting to IMAP server - mail.server.domain
+2017-08-23 17:25:05,660 | imap_monitor | ERROR | failed to connect to IMAP server - error: [Errno 10060] WSAETIMEDOUT; 
+2017-08-23 17:25:15,660 | imap_monitor | INFO | connecting to IMAP server - mail.server.domain
+2017-08-23 17:25:36,670 | imap_monitor | ERROR | failed to connect to IMAP server - error: [Errno 10060] WSAETIMEDOUT; 
+2017-08-23 17:25:46,670 | imap_monitor | INFO | connecting to IMAP server - mail.server.domain
+2017-08-23 17:26:07,670 | imap_monitor | ERROR | failed to connect to IMAP server - error: [Errno 10060] WSAETIMEDOUT; 
