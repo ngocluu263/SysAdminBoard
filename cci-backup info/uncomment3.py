@@ -1,23 +1,40 @@
 from xml.dom import minidom
 
 xml = """\
-<?xml version="1.0" ?>
-<Component FQDD="Disk.Virtual.0:RAID.Integrated.1-1">
-<Attribute Name="RAIDaction">CreateAuto</Attribute>
-<Attribute Name="LockStatus">Unlocked</Attribute>
-<Attribute Name="RAIDinitOperation">None</Attribute>
-<!-- <Attribute Name="T10PIStatus">Disabled</Attribute> -->
-<Attribute Name="DiskCachePolicy">Default</Attribute>
-<Attribute Name="RAIDdefaultWritePolicy">WriteBack</Attribute>
-<Attribute Name="RAIDdefaultReadPolicy">ReadAhead</Attribute>
-<Attribute Name="Name">Virtual Disk 0</Attribute>
-<Attribute Name="Size">107374182400</Attribute>
-<Attribute Name="StripeSize">128</Attribute>
-<!-- <Attribute Name="SpanDepth">1</Attribute> -->
-<!-- <Attribute Name="SpanLength">2</Attribute> -->
-<Attribute Name="RAIDTypes">RAID 1</Attribute>
-<!-- <Attribute Name="IncludedPhysicalDiskID">Disk.Bay.0:Enclosure.Internal.0-1:RAID.Integrated.1-1</Attribute> -->
-</Component>
+<SystemConfiguration Model="PowerEdge R430" ServiceTag="3SYYT52" TimeStamp="Wed Sep  6 18:14:47 2017">
+    <Component FQDD="Disk.Virtual.0:RAID.Integrated.1-1">
+    <Attribute Name="RAIDaction">CreateAuto</Attribute>
+    <Attribute Name="LockStatus">Unlocked</Attribute>
+    <Attribute Name="RAIDinitOperation">None</Attribute>
+    <!-- <Attribute Name="T10PIStatus">Disabled</Attribute> -->
+    <Attribute Name="DiskCachePolicy">Default</Attribute>
+    <Attribute Name="RAIDdefaultWritePolicy">WriteBack</Attribute>
+    <Attribute Name="RAIDdefaultReadPolicy">ReadAhead</Attribute>
+    <Attribute Name="Name">Virtual Disk 0</Attribute>
+    <Attribute Name="Size">107374182400</Attribute>
+    <Attribute Name="StripeSize">128</Attribute>
+    <!-- <Attribute Name="SpanDepth">1</Attribute> -->
+    <!-- <Attribute Name="SpanLength">2</Attribute> -->
+    <Attribute Name="RAIDTypes">RAID 1</Attribute>
+    <!-- <Attribute Name="IncludedPhysicalDiskID">Disk.Bay.0:Enclosure.Internal.0-1:RAID.Integrated.1-1</Attribute> -->
+    </Component>
+    <Component FQDD="Disk.Virtual.0:RAID.Integrated.1-1">
+    <Attribute Name="RAIDaction">CreateAuto</Attribute>
+    <Attribute Name="LockStatus">Unlocked</Attribute>
+    <Attribute Name="RAIDinitOperation">None</Attribute>
+    <!-- <Attribute Name="T10PIStatus">Disabled</Attribute> -->
+    <Attribute Name="DiskCachePolicy">Default</Attribute>
+    <Attribute Name="RAIDdefaultWritePolicy">WriteBack</Attribute>
+    <Attribute Name="RAIDdefaultReadPolicy">ReadAhead</Attribute>
+    <Attribute Name="Name">Virtual Disk 0</Attribute>
+    <Attribute Name="Size">107374182400</Attribute>
+    <Attribute Name="StripeSize">128</Attribute>
+    <!-- <Attribute Name="SpanDepth">1</Attribute> -->
+    <!-- <Attribute Name="SpanLength">2</Attribute> -->
+    <Attribute Name="RAIDTypes">RAID 1</Attribute>
+    <!-- <Attribute Name="IncludedPhysicalDiskID">Disk.Bay.0:Enclosure.Internal.0-1:RAID.Integrated.1-1</Attribute> -->
+    </Component>
+</SystemConfiguration>
 """
 
 def comment_node(node):
