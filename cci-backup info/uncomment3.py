@@ -20,15 +20,6 @@ xml = """\
 </Component>
 """
 
-xml2 = """\
-<target depends="create-build-dir" name="build-Folio">
-   <property name="project.name" value="Folio"/>
-   <ant antfile="build.xml" dir="Folio/FolioUI" inheritall="false" target="package"/>
-   <ant antfile="build.xml" dir="Folio/Folio" inheritall="false" target="package"/>
-</target>
-"""
-
-
 def comment_node(node):
     comment = node.ownerDocument.createComment(node.toxml())
     node.parentNode.replaceChild(comment, node)
@@ -43,48 +34,14 @@ def uncomment_node(comment):
     print node.toxml()
     return node
 
-# doc = minidom.parseString(xml).documentElement
-#
-# print doc.toxml()
-#
-# comment_node(doc.getElementsByTagName('Attribute')[-1])
-#
-# xml = doc.toxml()
-#
-# print 'comment_node():\n'
-# print xml
-
-doc = minidom.parseString(xml).documentElement
-#print doc.toxml()
-#comment = doc.lastChild.previousSibling
-comment = doc.lastChild.previousSibling
-
 doc = minidom.parse("xmlfile.xml")
 print "000"
 for element in doc.getElementsByTagName('Component'):
     print len(element.childNodes)
     print "111"
-    for i in range(0,len(element.childNodes)):
+    for i in range(0, len(element.childNodes)):
         nodes = element.childNodes[i].toxml()
         # uncomment_node(nodes)
         print nodes
         # uncomment_node(nodes)
-        # print doc.toxml()
 
-    # if element.getAttribute('Name') in ['SpanDepth', 'StripeSize']:
-    #     print "222"
-    #     print element[0]
-
-
-print comment.toxml()
-uncomment_node(comment)
-print 'uncomment_node():\n'
-# print doc.toxml()
-
-
-# xmldoc = minidom.parse('xmlfile.xml')
-# root = xmldoc.getElementsByTagName('Component')
-# for nodes in root:
-#     for node in nodes.childNodes:
-#         for x in node.childNodes:
-#             print node.childNodes[0]
