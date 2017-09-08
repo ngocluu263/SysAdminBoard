@@ -1,4 +1,10 @@
 from xml.dom import minidom
+import xml.etree.ElementTree as ET
+
+tree = ET.parse('xmlfile.xml')
+root = tree.getroot()
+for e in root.iter('tag_name'):
+    e.text = "something else" # This works
 
 xml = """\
 <SystemConfiguration Model="PowerEdge R430" ServiceTag="3SYYT52" TimeStamp="Wed Sep  6 18:14:47 2017">
@@ -51,14 +57,14 @@ def uncomment_node(comment):
     print node.toxml()
     return node
 
-doc = minidom.parse("xmlfile.xml")
-print "000"
-for element in doc.getElementsByTagName('Component'):
-    print len(element.childNodes)
-    print "111"
-    for i in range(0, len(element.childNodes)):
-        nodes = element.childNodes[i].toxml()
-        # uncomment_node(nodes)
-        print nodes
-        # uncomment_node(nodes)
+# doc = minidom.parse("xmlfile.xml").documentElement
+# print "000"
+# for element in doc.getElementsByTagName('Component'):
+#     print len(element.childNodes)
+#     print "111"
+#     for i in range(0, len(element.childNodes)):
+#         nodes = element.childNodes[i].toxml()
+#         # uncomment_node(nodes)
+#         print nodes
+#         # uncomment_node(nodes)
 
