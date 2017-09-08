@@ -37,7 +37,10 @@ def comment_node(node):
 
 def uncomment_node(comment):
     node = minidom.parseString(comment.data).firstChild
+    print comment.data
+    print node.toxml()
     comment.parentNode.replaceChild(node, comment)
+    print node.toxml()
     return node
 
 # doc = minidom.parseString(xml).documentElement
@@ -56,17 +59,32 @@ doc = minidom.parseString(xml).documentElement
 #comment = doc.lastChild.previousSibling
 comment = doc.lastChild.previousSibling
 
-#doc = minidom.parse("xmlfile.xml")
-# print "000"
-for element in doc.getElementsByTagName('Attribute'):
-    # print "111"
-    print element.childNodes
+# doc = minidom.parse("xmlfile.xml")
+print "000"
+for element in doc.getElementsByTagName('Component'):
+    print len(element.childNodes)
+    print "111"
+    for i in range(0,len(element.childNodes)):
+        nodes = element.childNodes[i]
+        uncomment_node(nodes)
+        print nodes
+        # uncomment_node(nodes)
+        # print doc.toxml()
 
     # if element.getAttribute('Name') in ['SpanDepth', 'StripeSize']:
     #     print "222"
     #     print element[0]
 
+
 print comment.toxml()
 uncomment_node(comment)
 print 'uncomment_node():\n'
-print doc.toxml()
+# print doc.toxml()
+
+
+# xmldoc = minidom.parse('xmlfile.xml')
+# root = xmldoc.getElementsByTagName('Component')
+# for nodes in root:
+#     for node in nodes.childNodes:
+#         for x in node.childNodes:
+#             print node.childNodes[0]
